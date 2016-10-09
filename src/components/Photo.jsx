@@ -4,9 +4,10 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Photo extends React.Component {
   static propTypes = {
-    post: React.PropTypes.object,
-    i: React.PropTypes.number,
+    post: React.PropTypes.object.isRequired,
+    i: React.PropTypes.number.isRequired,
     comments: React.PropTypes.object,
+    increment: React.PropTypes.func.isRequired,
   }
 
   render() {
@@ -28,7 +29,7 @@ class Photo extends React.Component {
         <figcaption>
           <p>{post.caption}</p>
           <div className="control-buttons">
-            <button className="likes">&hearts; {post.likes}</button>
+            <button onClick={() => this.props.increment(i)} className="likes">&hearts; {post.likes}</button>
             <Link className="button" to={`/view/${post.code}`}>
               <span className="comment-count">
                 <span className="speech-bubble"></span>
