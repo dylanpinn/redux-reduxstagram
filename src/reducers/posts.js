@@ -4,7 +4,7 @@ const posts = (state = [], action) => {
       const i = action.index;
       return [
         ...state.slice(0, i),
-        { ...state[i], likes: state[i] + 1 },
+        { ...state[i], likes: state[i].likes + 1 },
         ...state.slice(i + 1),
       ];
     default:
