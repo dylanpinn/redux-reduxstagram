@@ -1,3 +1,7 @@
+[![Code Climate](https://codeclimate.com/github/dylanpinn/react-reduxstagram/badges/gpa.svg)](https://codeclimate.com/github/dylanpinn/react-reduxstagram)
+[![dependencies Status](https://david-dm.org/dylanpinn/react-reduxstagram/status.svg)](https://david-dm.org/dylanpinn/react-reduxstagram)
+[![devDependencies Status](https://david-dm.org/dylanpinn/react-reduxstagram/dev-status.svg)](https://david-dm.org/dylanpinn/react-reduxstagram?type=dev)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.  
