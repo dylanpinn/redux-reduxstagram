@@ -11,7 +11,10 @@ class Comments extends React.Component {
         <p>
           <strong>{comment.user}</strong>
           {comment.text}
-          <button className="remove-comment">&times;</button>
+          <button
+            className="remove-comment"
+            onClick={() => this.props.removeComment(this.props.params.postId, i)}
+          >&times;</button>
         </p>
       </div>
     );
@@ -21,8 +24,9 @@ class Comments extends React.Component {
     e.preventDefault();
     const { postId } = this.props.params;
     const author = this.refs.author.value;
-    const comment = this.ref.comment.value;
+    const comment = this.refs.comment.value;
     this.props.addComment(postId, author, comment);
+    this.refs.commentForm.reset();
   };
 
   render() {
