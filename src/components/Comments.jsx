@@ -3,7 +3,7 @@ import React from 'react';
 
 type Props = {
   postComments: Object[],
-  params: Object,
+  params: { postId: string },
   removeComment: Function,
   addComment: Function,
 }

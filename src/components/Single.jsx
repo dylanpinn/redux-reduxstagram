@@ -2,11 +2,15 @@
 import React from 'react';
 import Photo from './Photo';
 import Comments from './Comments';
+import type types from '../types';
 
 type Props = {
-  posts: Object[],
+  posts: types.Post[],
   params: { postId: string },
-  comments: Object,
+  comments: types.Comments,
+  addComment: Function,
+  removeComment: Function,
+  increment: Function,
 }
 
 const Single = ({ posts, params, comments, ...props }: Props) => {
@@ -17,8 +21,8 @@ const Single = ({ posts, params, comments, ...props }: Props) => {
 
   return (
     <div className="single-photo">
-      <Photo i={i} post={post} {...props} />
-      <Comments postComments={postComments} {...props} />
+      <Photo i={i} post={post} comments={comments} {...props} />
+      <Comments postComments={postComments} params={params} {...props} />
     </div>
   );
 };

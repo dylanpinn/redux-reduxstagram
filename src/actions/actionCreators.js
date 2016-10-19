@@ -1,6 +1,7 @@
 // @flow
 // increment
-export const increment = index => ({
+// eslint-disable-next-line arrow-parens
+export const increment = (index: number) => ({
   type: 'INCREMENT_LIKES',
   index,
 });
