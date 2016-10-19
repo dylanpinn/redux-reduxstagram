@@ -1,5 +1,15 @@
 // @flow
-const postComments = (state = [], action) => {
+import type { Comment, Comments } from '../types';
+
+type Action = {
+  postId: string,
+  type: string,
+  author: string,
+  comment: string,
+  i: number,
+}
+
+const postComments = (state: Comment[] = [], action) => {
   switch (action.type) {
     case 'ADD_COMMENT':
       return [...state, {
@@ -16,7 +26,7 @@ const postComments = (state = [], action) => {
   }
 };
 
-const comments = (state = [], action: Object) => {
+const comments = (state: Comments = {}, action: Action) => {
   if (typeof action.postId !== 'undefined') {
     return {
       ...state,

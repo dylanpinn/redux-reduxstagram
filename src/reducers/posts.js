@@ -1,5 +1,7 @@
 // @flow
-const posts = (state = [], action: Object) => {
+import type { Post } from '../types';
+
+const posts = (state: Post[] = [], action: Object) => {
   const i = action.index;
 
   switch (action.type) {
