@@ -1,3 +1,4 @@
+// @flow
 export type Post = {
   code: string,
   caption: ?string,
@@ -9,8 +10,4 @@ export type Post = {
 export type Comment = {
   text: string,
   user: string,
-}
-
-export type Comments = {
-  [id: string]: Comment,
 }

@@ -1,11 +1,11 @@
 // @flow
 import React from 'react';
 import Photo from './Photo';
-import { Post, Comments } from '../types';
+import type { Post } from '../types';
 
 type Props = {
   posts: Post[],
-  comments: Comments,
+  comments: Object,
   increment: Function,
 }
 

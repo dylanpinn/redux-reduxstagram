@@ -2,12 +2,12 @@
 import React from 'react';
 import Photo from './Photo';
 import Comments from './Comments';
-import type types from '../types';
+import type { Post } from '../types';
 
 type Props = {
-  posts: types.Post[],
+  posts: Post[],
   params: { postId: string },
-  comments: types.Comments,
+  comments: Object,
   addComment: Function,
   removeComment: Function,
   increment: Function,

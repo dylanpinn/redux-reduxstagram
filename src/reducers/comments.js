@@ -1,5 +1,5 @@
 // @flow
-import type { Comment, Comments } from '../types';
+import type { Comment } from '../types';
 
 type Action = {
   postId: string,
@@ -26,7 +26,7 @@ const postComments = (state: Comment[] = [], action) => {
   }
 };
 
-const comments = (state: Comments = {}, action: Action) => {
+const comments = (state: Object = {}, action: Action) => {
   if (typeof action.postId !== 'undefined') {
     return {
       ...state,

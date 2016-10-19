@@ -1,8 +1,9 @@
 // @flow
 import React from 'react';
+import type { Comment } from '../types';
 
 type Props = {
-  postComments: Object[],
+  postComments: Comment[],
   params: { postId: string },
   removeComment: Function,
   addComment: Function,

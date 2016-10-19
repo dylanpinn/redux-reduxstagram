@@ -2,12 +2,12 @@
 import React from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
-import type { Post, Comments } from '../types';
+import type { Post } from '../types';
 
 type Props = {
   post: Post,
   i: number,
-  comments: Comments,
+  comments: Object,
   increment: Function,
 }
 
