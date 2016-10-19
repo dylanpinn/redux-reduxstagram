@@ -1,6 +1,18 @@
 import reducer from './posts';
 
 describe('posts reducer', () => {
+  it('should return state if no action type', () => {
+    const state = [{
+      likes: 0,
+      id: 'aaa',
+    }];
+    const action = { index: 0 };
+    const nextState = reducer(state, action);
+    expect(nextState).toEqual([{
+      likes: 0,
+      id: 'aaa',
+    }]);
+  });
   describe('INCREMENT_LIKES', () => {
     it('should work with 1 post', () => {
       const state = [{
