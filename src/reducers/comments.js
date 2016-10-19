@@ -16,7 +16,7 @@ const postComments = (state = [], action) => {
   }
 };
 
-const comments = (state = [], action) => {
+const comments = (state = [], action: Object) => {
   if (typeof action.postId !== 'undefined') {
     return {
       ...state,

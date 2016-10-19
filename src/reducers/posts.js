@@ -1,8 +1,9 @@
 // @flow
-const posts = (state = [], action) => {
+const posts = (state = [], action: Object) => {
+  const i = action.index;
+
   switch (action.type) {
     case 'INCREMENT_LIKES':
-      const i = action.index;
       return [
         ...state.slice(0, i),
         { ...state[i], likes: state[i].likes + 1 },
