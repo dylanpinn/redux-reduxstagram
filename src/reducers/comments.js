@@ -1,3 +1,4 @@
+// @flow
 const postComments = (state = [], action) => {
   switch (action.type) {
     case 'ADD_COMMENT':

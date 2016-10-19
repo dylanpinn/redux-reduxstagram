@@ -1,3 +1,4 @@
+// @flow
 import Raven from 'raven-js';
 
 const sentryKey = '45931e7263624bab9eea805839bf9e90';

@@ -1,3 +1,4 @@
+// @flow
 // increment
 export const increment = index => ({
   type: 'INCREMENT_LIKES',

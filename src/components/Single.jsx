@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Photo from './Photo';
 import Comments from './Comments';

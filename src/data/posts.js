@@ -1,3 +1,4 @@
+// @flow
 const posts = [
   {
     code: 'BAcyDyQwcXX',
