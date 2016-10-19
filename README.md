@@ -2,6 +2,7 @@
 [![dependencies Status](https://david-dm.org/dylanpinn/react-reduxstagram/status.svg)](https://david-dm.org/dylanpinn/react-reduxstagram)
 [![devDependencies Status](https://david-dm.org/dylanpinn/react-reduxstagram/dev-status.svg)](https://david-dm.org/dylanpinn/react-reduxstagram?type=dev)
 [![Build Status](https://travis-ci.org/dylanpinn/react-reduxstagram.svg?branch=master)](https://travis-ci.org/dylanpinn/react-reduxstagram)
+[![Coverage Status](https://coveralls.io/repos/github/dylanpinn/react-reduxstagram/badge.svg)](https://coveralls.io/github/dylanpinn/react-reduxstagram)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
