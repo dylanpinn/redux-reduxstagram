@@ -11,17 +11,20 @@ type Props = {
 
 class Comments extends React.Component {
   props: Props;
+  author: any;
+  comment: any;
+  commentForm: any;
 
-  handleSubmit = (e: Event) => {
+  handleSubmit = (e: Event): void => {
     e.preventDefault();
     const { postId } = this.props.params;
-    const author = this.refs.author.value;
-    const comment = this.refs.comment.value;
+    const author: mixed = this.author.value;
+    const comment: mixed = this.comment.value;
     this.props.addComment(postId, author, comment);
-    this.refs.commentForm.reset();
+    this.commentForm.reset();
   };
 
-  renderComment = (comment: Object, i: number) => (
+  renderComment = (comment: Object, i: number): any => (
     <div className="comment" key={i}>
       <p>
         <strong>{comment.user}</strong>
@@ -38,9 +41,17 @@ class Comments extends React.Component {
     return (
       <div className="comments">
         {this.props.postComments.map(this.renderComment)}
-        <form ref="commentForm" className="comment-form" onSubmit={this.handleSubmit}>
-          <input type="text" ref="author" placeholder="author" />
-          <input type="text" ref="comment" placeholder="comment" />
+        <form ref={(form) => { this.commentForm = form; }} className="comment-form" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            ref={(input) => { this.author = input; }}
+            placeholder="author"
+          />
+          <input
+            type="text"
+            ref={(input) => { this.comment = input; }}
+            placeholder="comment"
+          />
           <input type="submit" hidden />
         </form>
       </div>
