@@ -2,5 +2,6 @@
 {
   "eslint.enable": true,
   "javascript.validate.enable": false,
-  "flow.pathToFlow": "./node_modules/.bin/flow"
+  "flow.pathToFlow": "./node_modules/.bin/flow",
+  "eslint.autoFixOnSave": true
 }
