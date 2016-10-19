@@ -6,7 +6,9 @@ export const increment = index => ({
 });
 
 // add comment
-export const addComment = (postId, author, comment) => ({
+export const addComment = (
+  postId: string, author: string, comment: string
+) => ({
   type: 'ADD_COMMENT',
   postId,
   author,
@@ -14,7 +16,7 @@ export const addComment = (postId, author, comment) => ({
 });
 
 // remove comment
-export const removeComment = (postId, i) => ({
+export const removeComment = (postId: string, i: number) => ({
   type: 'REMOVE_COMMENT',
   i,
   postId,
