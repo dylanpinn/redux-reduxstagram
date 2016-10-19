@@ -1,27 +1,17 @@
 // @flow
 import React from 'react';
 
+type Props = {
+  postComments: Object[],
+  params: Object,
+  removeComment: Function,
+  addComment: Function,
+}
+
 class Comments extends React.Component {
-  static propTypes = {
-    postComments: React.PropTypes.array.isRequired,
-  }
+  props: Props;
 
-  renderComment = (comment, i) => {
-    return (
-      <div className="comment" key={i}>
-        <p>
-          <strong>{comment.user}</strong>
-          {comment.text}
-          <button
-            className="remove-comment"
-            onClick={() => this.props.removeComment(this.props.params.postId, i)}
-          >&times;</button>
-        </p>
-      </div>
-    );
-  };
-
-  handleSubmit = (e) => {
+  handleSubmit = (e: Event) => {
     e.preventDefault();
     const { postId } = this.props.params;
     const author = this.refs.author.value;
@@ -29,6 +19,19 @@ class Comments extends React.Component {
     this.props.addComment(postId, author, comment);
     this.refs.commentForm.reset();
   };
+
+  renderComment = (comment: Object, i: number) => (
+    <div className="comment" key={i}>
+      <p>
+        <strong>{comment.user}</strong>
+        {comment.text}
+        <button
+          className="remove-comment"
+          onClick={() => this.props.removeComment(this.props.params.postId, i)}
+        >&times;</button>
+      </p>
+    </div>
+  );
 
   render() {
     return (
