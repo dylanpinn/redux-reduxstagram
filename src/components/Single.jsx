@@ -15,9 +15,9 @@ type Props = {
 
 const Single = ({ posts, params, comments, ...props }: Props) => {
   const { postId } = params;
-  const i = posts.findIndex(post => post.code === postId);
-  const post = posts[i];
-  const postComments = comments[postId] || [];
+  const i: number = posts.findIndex(post => post.code === postId);
+  const post: Post = posts[i];
+  const postComments: Object[] = comments[postId] || [];
 
   return (
     <div className="single-photo">
