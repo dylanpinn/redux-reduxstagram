@@ -18,7 +18,7 @@ Raven.config(sentryUrl, {
   },
 }).install();
 
-const router = (
+const router: React$Element<*> = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>

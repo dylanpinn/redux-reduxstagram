@@ -2,11 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-type Props = {
-  children: any,
-}
-
-const Main = ({ children, ...props }: Props) => (
+const Main = ({ children, ...props }: any) => (
   <div>
     <h1>
       <Link to="/">Reduxstagram</Link>

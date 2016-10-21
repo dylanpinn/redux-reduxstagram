@@ -1,16 +1,16 @@
 // @flow
-import type { Post } from '../types';
+import type { Action, Posts } from '../types';
 
-const posts = (state: Post[] = [], action: Object) => {
-  const i = action.index;
-
+const posts = (state: Posts = [], action: Action): Posts => {
   switch (action.type) {
-    case 'INCREMENT_LIKES':
+    case 'INCREMENT_LIKES': {
+      const i = action.index;
       return [
         ...state.slice(0, i),
         { ...state[i], likes: state[i].likes + 1 },
         ...state.slice(i + 1),
       ];
+    }
     default:
       return state;
   }

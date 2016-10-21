@@ -2,15 +2,18 @@
 import React from 'react';
 import Photo from './Photo';
 import Comments from './Comments';
-import type { Post } from '../types';
+import type {
+  Post, Posts, Id, CommentsMap,
+  addCommentFunc, removeCommentFunc, incrementFunc,
+} from '../types';
 
 type Props = {
-  posts: Post[],
-  params: { postId: string },
-  comments: Object,
-  addComment: Function,
-  removeComment: Function,
-  increment: Function,
+  posts: Posts,
+  params: { postId: Id },
+  comments: CommentsMap,
+  addComment: addCommentFunc,
+  removeComment: removeCommentFunc,
+  increment: incrementFunc,
 }
 
 const Single = ({ posts, params, comments, ...props }: Props) => {
