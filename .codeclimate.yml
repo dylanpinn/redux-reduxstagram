@@ -12,6 +12,5 @@ ratings:
   - "**.js"
   - "**.jsx"
 exclude_paths:
-- node_modules/
 - coverage/
 - typings/
