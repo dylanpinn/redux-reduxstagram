@@ -1,6 +1,12 @@
 import reducer from './posts';
 
 describe('posts reducer', () => {
+  it('should return initialState if none passed', () => {
+    let state;
+    const action = {};
+    const nextState = reducer(state, action);
+    expect(nextState).toEqual([]);
+  });
   it('should return state if no action type', () => {
     const state = [{
       likes: 0,

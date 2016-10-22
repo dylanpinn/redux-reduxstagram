@@ -2,13 +2,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
-import type { Post } from '../types';
+import type { Post, CommentsMap, incrementFunc } from '../types';
 
 type Props = {
   post: Post,
   i: number,
-  comments: Object,
-  increment: Function,
+  comments: CommentsMap,
+  increment: incrementFunc,
 }
 
 const Photo = ({ post, i, comments, ...props }: Props) => (

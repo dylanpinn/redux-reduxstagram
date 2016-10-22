@@ -1,12 +1,14 @@
 // @flow
 import React from 'react';
-import type { Comment } from '../types';
+import type {
+  Comment, Id, removeCommentFunc, addCommentFunc,
+} from '../types';
 
 type Props = {
   postComments: Comment[],
-  params: { postId: string },
-  removeComment: (postId: string, i: number) => Object,
-  addComment: (postId: string, author: string, comment: string) => Object,
+  params: { postId: Id },
+  removeComment: removeCommentFunc,
+  addComment: addCommentFunc,
 }
 
 class Comments extends React.Component {
@@ -24,7 +26,7 @@ class Comments extends React.Component {
     this.commentForm.reset();
   };
 
-  renderComment = (comment: Comment, i: number): any => (
+  renderComment = (comment: Comment, i: number) => (
     <div className="comment" key={i}>
       <p>
         <strong>{comment.user}</strong>

@@ -2,22 +2,25 @@
 import React from 'react';
 import Photo from './Photo';
 import Comments from './Comments';
-import type { Post } from '../types';
+import type {
+  Post, Posts, Id, CommentsMap,
+  addCommentFunc, removeCommentFunc, incrementFunc,
+} from '../types';
 
 type Props = {
-  posts: Post[],
-  params: { postId: string },
-  comments: Object,
-  addComment: Function,
-  removeComment: Function,
-  increment: Function,
+  posts: Posts,
+  params: { postId: Id },
+  comments: CommentsMap,
+  addComment: addCommentFunc,
+  removeComment: removeCommentFunc,
+  increment: incrementFunc,
 }
 
 const Single = ({ posts, params, comments, ...props }: Props) => {
   const { postId } = params;
-  const i = posts.findIndex(post => post.code === postId);
-  const post = posts[i];
-  const postComments = comments[postId] || [];
+  const i: number = posts.findIndex(post => post.code === postId);
+  const post: Post = posts[i];
+  const postComments: Object[] = comments[postId] || [];
 
   return (
     <div className="single-photo">

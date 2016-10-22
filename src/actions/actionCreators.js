@@ -1,7 +1,8 @@
 // @flow
+import type { Id, Action } from '../types';
 // increment
 // eslint-disable-next-line arrow-parens
-export const increment = (index: number): Object => ({
+export const increment = (index: number): Action => ({
   type: 'INCREMENT_LIKES',
   index,
 });
@@ -9,7 +10,7 @@ export const increment = (index: number): Object => ({
 // add comment
 export const addComment = (
   postId: string, author: string, comment: string
-): Object => ({
+): Action => ({
   type: 'ADD_COMMENT',
   postId,
   author,
@@ -17,7 +18,7 @@ export const addComment = (
 });
 
 // remove comment
-export const removeComment = (postId: string, i: number): Object => ({
+export const removeComment = (postId: Id, i: number): Action => ({
   type: 'REMOVE_COMMENT',
   i,
   postId,

@@ -1,10 +1,11 @@
 ---
 engines:
-  csslint:
-    enabled: true
   eslint:
     enabled: true
     channel: "eslint-3"
+    checks:
+      import/no-unresolved:
+        enabled: false
   fixme:
     enabled: true
 ratings:
@@ -15,3 +16,5 @@ ratings:
   - "**.jsx"
 exclude_paths:
 - node_modules/
+- coverage/
+- typings/

@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
 import Photo from './Photo';
-import type { Post } from '../types';
+import type { Post, CommentsMap, incrementFunc } from '../types';
 
 type Props = {
   posts: Post[],
-  comments: Object,
-  increment: Function,
+  comments: CommentsMap,
+  increment: incrementFunc,
 }
 
 const PhotoGrid = ({ posts, ...props }: Props) => (
