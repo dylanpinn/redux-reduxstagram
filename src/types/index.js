@@ -1,5 +1,6 @@
 // @flow
 import type { Store as ReduxStore, Dispatch as ReduxDispatch } from 'redux';
+import type { Map } from 'immutable';
 
 export type Id = string;
 
@@ -21,6 +22,10 @@ export type Comment = {
 export type CommentsMap = {
   [postId: Id]: Comment[],
 }
+
+// Map<(string) | ('name', 'tags'), string | List<string>>
+
+// export type State = Map<string, Posts>;
 
 export type State = {
   posts: Posts,
