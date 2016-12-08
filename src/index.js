@@ -31,5 +31,5 @@ const router: React$Element<*> = (
 
 ReactDOM.render(
   router,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
