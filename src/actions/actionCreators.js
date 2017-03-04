@@ -9,7 +9,7 @@ export const increment = (index: number): Action => ({
 
 // add comment
 export const addComment = (
-  postId: string, author: string, comment: string
+  postId: string, author: string, comment: string,
 ): Action => ({
   type: 'ADD_COMMENT',
   postId,

@@ -13,7 +13,7 @@
   },
   "rules": {
     "react/jsx-filename-extension": 0,
-    "no-duplicate-imports": 0,
+    "no-duplicate-imports": 0
   },
   "settings": {
     "flowtype": {
