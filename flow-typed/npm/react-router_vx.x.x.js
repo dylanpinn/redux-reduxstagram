@@ -1,4 +1,4 @@
-// flow-typed signature: 7f2e43d24ea117e03c3e2080cca0875e
+// flow-typed signature: 55bd7e579a187f1a6f80adc7ae740b01
 // flow-typed version: <<STUB>>/react-router_v^3.0.2/flow_v0.47.0
 
 /**
@@ -286,14 +286,6 @@ declare module 'react-router/lib/withRouter' {
   declare module.exports: any;
 }
 
-declare module 'react-router/umd/react-router' {
-  declare module.exports: any;
-}
-
-declare module 'react-router/umd/react-router.min' {
-  declare module.exports: any;
-}
-
 declare module 'react-router/umd/ReactRouter' {
   declare module.exports: any;
 }
@@ -500,12 +492,6 @@ declare module 'react-router/lib/useRouterHistory.js' {
 }
 declare module 'react-router/lib/withRouter.js' {
   declare module.exports: $Exports<'react-router/lib/withRouter'>;
-}
-declare module 'react-router/umd/react-router.js' {
-  declare module.exports: $Exports<'react-router/umd/react-router'>;
-}
-declare module 'react-router/umd/react-router.min.js' {
-  declare module.exports: $Exports<'react-router/umd/react-router.min'>;
 }
 declare module 'react-router/umd/ReactRouter.js' {
   declare module.exports: $Exports<'react-router/umd/ReactRouter'>;

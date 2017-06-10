@@ -1,4 +1,4 @@
-// flow-typed signature: 3d6235fbb3f5540b037ab670097c5259
+// flow-typed signature: 67f8bff6260d9c68a8e224da59e56920
 // flow-typed version: <<STUB>>/raven-js_v^3.12.0/flow_v0.47.0
 
 /**
@@ -138,11 +138,27 @@ declare module 'raven-js/src/singleton' {
   declare module.exports: any;
 }
 
+declare module 'raven-js/src/utils' {
+  declare module.exports: any;
+}
+
 declare module 'raven-js/template/_copyright' {
   declare module.exports: any;
 }
 
 declare module 'raven-js/test/integration/test' {
+  declare module.exports: any;
+}
+
+declare module 'raven-js/test/integration/throw-error' {
+  declare module.exports: any;
+}
+
+declare module 'raven-js/test/integration/throw-object' {
+  declare module.exports: any;
+}
+
+declare module 'raven-js/test/integration/throw-string' {
   declare module.exports: any;
 }
 
@@ -174,11 +190,19 @@ declare module 'raven-js/test/vendor/fixtures/captured-errors' {
   declare module.exports: any;
 }
 
+declare module 'raven-js/test/vendor/json-stringify-safe.test' {
+  declare module.exports: any;
+}
+
 declare module 'raven-js/test/vendor/tracekit-parser.test' {
   declare module.exports: any;
 }
 
 declare module 'raven-js/test/vendor/tracekit.test' {
+  declare module.exports: any;
+}
+
+declare module 'raven-js/vendor/json-stringify-safe/stringify' {
   declare module.exports: any;
 }
 
@@ -274,11 +298,23 @@ declare module 'raven-js/src/raven.js' {
 declare module 'raven-js/src/singleton.js' {
   declare module.exports: $Exports<'raven-js/src/singleton'>;
 }
+declare module 'raven-js/src/utils.js' {
+  declare module.exports: $Exports<'raven-js/src/utils'>;
+}
 declare module 'raven-js/template/_copyright.js' {
   declare module.exports: $Exports<'raven-js/template/_copyright'>;
 }
 declare module 'raven-js/test/integration/test.js' {
   declare module.exports: $Exports<'raven-js/test/integration/test'>;
+}
+declare module 'raven-js/test/integration/throw-error.js' {
+  declare module.exports: $Exports<'raven-js/test/integration/throw-error'>;
+}
+declare module 'raven-js/test/integration/throw-object.js' {
+  declare module.exports: $Exports<'raven-js/test/integration/throw-object'>;
+}
+declare module 'raven-js/test/integration/throw-string.js' {
+  declare module.exports: $Exports<'raven-js/test/integration/throw-string'>;
 }
 declare module 'raven-js/test/plugins/angular.test.js' {
   declare module.exports: $Exports<'raven-js/test/plugins/angular.test'>;
@@ -301,11 +337,17 @@ declare module 'raven-js/test/utils.test.js' {
 declare module 'raven-js/test/vendor/fixtures/captured-errors.js' {
   declare module.exports: $Exports<'raven-js/test/vendor/fixtures/captured-errors'>;
 }
+declare module 'raven-js/test/vendor/json-stringify-safe.test.js' {
+  declare module.exports: $Exports<'raven-js/test/vendor/json-stringify-safe.test'>;
+}
 declare module 'raven-js/test/vendor/tracekit-parser.test.js' {
   declare module.exports: $Exports<'raven-js/test/vendor/tracekit-parser.test'>;
 }
 declare module 'raven-js/test/vendor/tracekit.test.js' {
   declare module.exports: $Exports<'raven-js/test/vendor/tracekit.test'>;
+}
+declare module 'raven-js/vendor/json-stringify-safe/stringify.js' {
+  declare module.exports: $Exports<'raven-js/vendor/json-stringify-safe/stringify'>;
 }
 declare module 'raven-js/vendor/TraceKit/tracekit.js' {
   declare module.exports: $Exports<'raven-js/vendor/TraceKit/tracekit'>;

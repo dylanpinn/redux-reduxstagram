@@ -1,4 +1,4 @@
-// flow-typed signature: 0abc07d9297f6612cc00348130bd357a
+// flow-typed signature: 2d5f11537ac2dee876d869faee80a142
 // flow-typed version: <<STUB>>/coveralls_v^2.11.16/flow_v0.47.0
 
 /**
@@ -62,6 +62,10 @@ declare module 'coveralls/test/convertLcovToCoveralls' {
   declare module.exports: any;
 }
 
+declare module 'coveralls/test/detectLocalGit' {
+  declare module.exports: any;
+}
+
 declare module 'coveralls/test/fetchGitData' {
   declare module.exports: any;
 }
@@ -118,6 +122,9 @@ declare module 'coveralls/lib/sendToCoveralls.js' {
 }
 declare module 'coveralls/test/convertLcovToCoveralls.js' {
   declare module.exports: $Exports<'coveralls/test/convertLcovToCoveralls'>;
+}
+declare module 'coveralls/test/detectLocalGit.js' {
+  declare module.exports: $Exports<'coveralls/test/detectLocalGit'>;
 }
 declare module 'coveralls/test/fetchGitData.js' {
   declare module.exports: $Exports<'coveralls/test/fetchGitData'>;
