@@ -37,5 +37,10 @@
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
     "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css",
     "flow": "flow"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "react-router"
+    ]
   }
 }
