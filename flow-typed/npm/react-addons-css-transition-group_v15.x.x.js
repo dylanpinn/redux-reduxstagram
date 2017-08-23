@@ -1,5 +1,5 @@
-// flow-typed signature: fe7abf92d2b0a6cb8907b2ea573c8586
-// flow-typed version: e06e1b48c4/react-addons-css-transition-group_v15.x.x/flow_>=v0.26.x
+// flow-typed signature: dddbc6b764309c2d06c7f4d8ba5c2da4
+// flow-typed version: 19506e57e6/react-addons-css-transition-group_v15.x.x/flow_>=v0.26.x <=v0.52.x
 
 declare module 'react-addons-css-transition-group' {
   declare type ReactCSSTransitionGroupNames = {
