@@ -1,5 +1,8 @@
-// flow-typed signature: a94e29aab373caa7c8d660b70798874c
-// flow-typed version: aff2bf770e/react-redux_v5.x.x/flow_>=v0.30.x <=v0.52.x
+// flow-typed signature: c5fac64666f9589a0c1b2de956dc7919
+// flow-typed version: 81d6274128/react-redux_v5.x.x/flow_>=v0.53.x
+
+// flow-typed signature: 8db7b853f57c51094bf0ab8b2650fd9c
+// flow-typed version: ab8db5f14d/react-redux_v5.x.x/flow_>=v0.30.x
 
 import type { Dispatch, Store } from "redux";
 
@@ -31,41 +34,30 @@ declare module "react-redux" {
 
   declare type Context = { store: Store<*, *> };
 
-  declare type StatelessComponent<P> = (
-    props: P,
-    context: Context
-  ) => ?React$Element<any>;
-
-  declare class ConnectedComponent<OP, P, Def, St> extends React$Component<
-    void,
-    OP,
-    void
-  > {
-    static WrappedComponent: Class<React$Component<Def, P, St>>,
-    getWrappedInstance(): React$Component<Def, P, St>,
-    static defaultProps: void,
+  declare class ConnectedComponent<OP, P> extends React$Component<OP> {
+    static WrappedComponent: Class<React$Component<P>>,
+    getWrappedInstance(): React$Component<P>,
     props: OP,
     state: void
   }
 
-  declare type ConnectedComponentClass<OP, P, Def, St> = Class<
-    ConnectedComponent<OP, P, Def, St>
+  declare type ConnectedComponentClass<OP, P> = Class<
+    ConnectedComponent<OP, P>
   >;
 
-  declare type Connector<OP, P> = {
-    (
-      component: StatelessComponent<P>
-    ): ConnectedComponentClass<OP, P, void, void>,
-    <Def, St>(
-      component: Class<React$Component<Def, P, St>>
-    ): ConnectedComponentClass<OP, P, Def, St>
-  };
+  declare type Connector<OP, P> = (
+    component: React$ComponentType<P>
+  ) => ConnectedComponentClass<OP, P>;
 
-  declare class Provider<S, A> extends React$Component<
-    void,
-    { store: Store<S, A>, children?: any },
-    void
-  > {}
+  declare class Provider<S, A> extends React$Component<{
+    store: Store<S, A>,
+    children?: any
+  }> {}
+
+  declare function createProvider(
+    storeKey?: string,
+    subKey?: string
+  ): Provider<*, *>;
 
   declare type ConnectOptions = {
     pure?: boolean,
