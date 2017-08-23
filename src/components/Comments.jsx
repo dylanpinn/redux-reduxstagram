@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import type {
   Comment, Id, removeCommentFunc, addCommentFunc,
 } from '../types';
@@ -11,19 +11,23 @@ type Props = {
   addComment: addCommentFunc,
 }
 
-class Comments extends React.Component {
+class Comments extends React.Component<Props> {
   props: Props;
-  author: HTMLInputElement;
-  comment: HTMLInputElement;
-  commentForm: HTMLFormElement;
+  author: ?HTMLInputElement;
+  comment: ?HTMLInputElement;
+  commentForm: ?HTMLFormElement;
 
   handleSubmit = (e: Event): void => {
     e.preventDefault();
     const { postId } = this.props.params;
-    const author: string = this.author.value;
-    const comment: string = this.comment.value;
-    this.props.addComment(postId, author, comment);
-    this.commentForm.reset();
+    if (this.author && this.comment) {
+      const author: string = this.author.value;
+      const comment: string = this.comment.value;
+      this.props.addComment(postId, author, comment);
+      if (this.commentForm) {
+        this.commentForm.reset();
+      }
+    }
   };
 
   renderComment = (comment: Comment, i: number) => (
