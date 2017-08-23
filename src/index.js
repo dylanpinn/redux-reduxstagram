@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
@@ -18,7 +18,7 @@ Raven.config(sentryUrl, {
   },
 }).install();
 
-const router: React$Element<*> = (
+const router: React.Element<any> = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
