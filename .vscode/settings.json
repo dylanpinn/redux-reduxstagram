@@ -1,7 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
   "eslint.enable": true,
-  "javascript.validate.enable": false,
+  "eslint.autoFixOnSave": true,
+  "flow.enabled": true,
   "flow.pathToFlow": "./node_modules/.bin/flow",
-  "eslint.autoFixOnSave": true
+  "javascript.validate.enable": false
 }
